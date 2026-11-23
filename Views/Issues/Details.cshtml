@@ -1,0 +1,87 @@
+﻿@model Tracker.Models.Issue
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <div class="text-center mb-4">
+                <h1 class="fw-bold">@Model.Title</h1>
+
+                <p class="text-muted mb-2">
+                    @(string.IsNullOrWhiteSpace(Model.Description) ? "No description provided." : Model.Description)
+                </p>
+
+                <small class="text-muted">
+                    Created: @Model.CreatedAt.ToString("dd.MM.yyyy HH:mm")
+                </small>
+            </div>
+
+            <hr />
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="mb-0">Issue Details</h3>
+                <span class="badge bg-secondary">@Model.Status</span>
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted">Priority</span>
+                        <span class="badge bg-secondary">@Model.Priority</span>
+                    </div>
+
+                    <hr />
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted">Project</span>
+                        <a asp-controller="Projects" asp-action="Details" asp-route-id="@Model.ProjectId" class="text-decoration-none"> @ViewBag.ProjectName </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="mb-0">Comments</h3>
+                <span class="badge bg-primary rounded-pill">
+                    @Model.Comments.Count
+                </span>
+            </div>
+
+
+            @if (Model.Comments.Any())
+            {
+                @foreach (var comment in Model.Comments)
+                {
+                    <div class="card shadow-sm mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <p class="mb-2">@comment.Content</p>
+
+                                <form asp-controller="Comments"  asp-action="Delete" asp-route-id="@comment.Id" method="post">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger"> Delete </button>
+                                </form>
+                            </div>
+
+                            <small class="text-muted">
+                                @comment.CreatedAt.ToString("dd.MM.yyyy HH:mm")
+                            </small>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-muted text-center">No comments yet.</p>
+            }
+
+
+            <div class="d-flex justify-content-center flex-wrap gap-2 mt-4">
+                <a asp-controller="Comments" asp-action="Create" asp-route-issueId="@Model.Id" class="btn btn-primary"> Add Comment </a>
+
+                <a asp-controller="Issues" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary"> Edit Issue </a>
+
+                <a asp-controller="Issues" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger"> Delete Issue </a>
+            </div>
+
+        </div>
+    </div>
+</div>

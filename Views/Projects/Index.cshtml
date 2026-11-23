@@ -1,0 +1,50 @@
+﻿@model List<Tracker.Models.Project>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Your Projects</h1>
+        <a asp-action="Create" class="btn btn-primary">Create Project</a>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <p class="text-muted">No projects yet. Consider adding one!</p>
+    }
+    else
+    {
+        <div class="row row-cols-1 row-cols-md-2 g-3">
+            @foreach (var p in Model)
+            {
+                <div class="col">
+                    <a asp-action="Details" asp-route-id="@p.Id" class="text-decoration-none text-dark">
+                        <div class="card clickable-card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">@p.Name</h5>
+
+                                <p class="card-text text-muted"> @(string.IsNullOrWhiteSpace(p.Description) ? "No description." : p.Description) </p>
+
+                                <hr />
+
+                                <p class="mb-2"> <strong>Issues (@p.Issues.Count):</strong> </p>
+
+                        @if (p.Issues.Any())
+                                {
+                                    <ul class="mb-0">
+                                        @foreach (var issue in p.Issues)
+                                        {
+                                            <li>@issue.Title</li>
+                                        }
+                                    </ul>
+                                }
+                                else
+                                {
+                                    <small class="text-muted">No issues yet.</small>
+                                }
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    }
+</div>
