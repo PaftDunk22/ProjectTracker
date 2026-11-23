@@ -66,8 +66,8 @@ EF Core migrations are included in the repository to manage database schema chan
 
 The application will be available at the local address displayed in the terminal.
 
-#Screenshots
 ## Screenshots
+![home page light mode](images/home_light.png)
 
 Screenshots of the application will be added here.
 
