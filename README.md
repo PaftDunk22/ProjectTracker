@@ -1,8 +1,9 @@
 # Tracker
 
-# Tracker – Issue Tracking Application
+# Tracker – Project & Issue Tracker
 
-A simple issue tracking application built with **ASP.NET Core MVC**, allowing users to organize projects, manage issues, and keep track of comments.
+A simple applicatio for tracking project and issues built with **ASP.NET Core MVC**, allowing users to organize projects, manage issues, and keep track of comments.
+Screenshots of the app(#foo)
 
 ## Features
 
@@ -35,19 +36,14 @@ Database relationships:
 
 EF Core migrations are included in the repository to manage database schema changes.
 
-## Getting Started
-
-### Prerequisites
-
-- [.NET SDK](https://dotnet.microsoft.com/download)
-- [Visual Studio](https://visualstudio.microsoft.com/) (recommended)
-
 ### Installation
+
+- required [.NET SDK](https://dotnet.microsoft.com/download)
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/Tracker.git
+   git clone https://github.com/PaftDunk22/Tracker.git
    ```
 
 2. Navigate to the project directory:
@@ -70,12 +66,12 @@ EF Core migrations are included in the repository to manage database schema chan
 
 The application will be available at the local address displayed in the terminal.
 
+#Screenshots
 ## Screenshots
 
 Screenshots of the application will be added here.
 
-## Future Improvements
+## Future potential work
 
 - User authentication and individual project ownership.
 - Additional issue filtering and sorting options.
-- Improved project and issue management features.
