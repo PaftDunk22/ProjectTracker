@@ -1,5 +1,3 @@
-# Tracker
-
 # Tracker – Project & Issue Tracker
 
 A simple applicatio for tracking project and issues built with **ASP.NET Core MVC**, allowing users to organize projects, manage issues, and keep track of comments.
