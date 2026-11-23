@@ -67,9 +67,24 @@ EF Core migrations are included in the repository to manage database schema chan
 The application will be available at the local address displayed in the terminal.
 
 ## Screenshots
+This is the home page
 ![home page light mode](images/home_light.png)
+This is the dark mode function, available for every page on the site
+![home page light mode](images/home_dark.png)
+This is the projects page
+![projects](images/projects.png)
+This is the issues page
+![issues](images/issues.png)
+This is the issue page
+![issue](images/issue.png)
+This is an example of a create page
+![create](images/create.png)
+This is an example of an edit page
+![edit](images/edit.png)
+This is an example of a delete page
+![delete](images/delete.png)
 
-Screenshots of the application will be added here.
+
 
 ## Future potential work
 
