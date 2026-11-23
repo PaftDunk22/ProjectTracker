@@ -62,4 +62,4 @@
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
 
-Views/** linguist-vendored
+Views/** linguist-detectable=false
