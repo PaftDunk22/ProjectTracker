@@ -47,7 +47,7 @@ EF Core migrations are included in the repository to manage database schema chan
 2. Navigate to the project directory:
 
    ```bash
-   cd Tracker
+   cd ProjectTracker
    ```
 
 3. Apply database migrations:
