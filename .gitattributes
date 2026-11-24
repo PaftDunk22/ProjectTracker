@@ -63,3 +63,4 @@
 #*.RTF   diff=astextplain
 
 /Views/Shared/* linguist-vendored
+/Views/Home/* linguist-vendored
