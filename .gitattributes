@@ -62,4 +62,4 @@
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
 
-/Views/** linguist-vendored
+/Views/Shared/* linguist-vendored
