@@ -41,7 +41,7 @@ EF Core migrations are included in the repository to manage database schema chan
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/PaftDunk22/Tracker.git
+   git clone https://github.com/PaftDunk22/ProjectTracker.git
    ```
 
 2. Navigate to the project directory:
