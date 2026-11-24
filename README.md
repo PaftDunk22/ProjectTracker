@@ -1,6 +1,6 @@
 # Tracker – Project & Issue Tracker
 
-A simple applicatio for tracking project and issues built with **ASP.NET Core MVC**, allowing users to organize projects, manage issues, and keep track of comments.
+A simple application for tracking project and issues built with **ASP.NET Core MVC**, allowing users to organize projects, manage issues, and keep track of comments.
 [Screenshots](#Screenshots)
 
 ## Features
@@ -88,10 +88,3 @@ This is an example of an edit page
 
 This is an example of a delete page
 ![delete](images/delete.png)
-
-
-
-## Future potential work
-
-- User authentication and individual project ownership.
-- Additional issue filtering and sorting options.
